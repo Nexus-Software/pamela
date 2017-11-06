@@ -1,3 +1,3 @@
 sudo: required
 language: c
-script: sudo make install && sudo make uninstall && echo "deb [trusted=yes] http://hydro.nexus-software.fr/pamela ./" >> /etc/apt/sources.list && apt-get update && apt-get install -y pamela && apt-get remove -y pamela
+script: sudo make install && sudo make uninstall && sudo su -c "echo 'deb [trusted=yes] http://hydro.nexus-software.fr/pamela ./' >> /etc/apt/sources.list" && sudo apt-get update && sudo apt-get install -y pamela && sudo apt-get remove -y pamela
