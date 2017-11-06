@@ -1,0 +1,186 @@
+\hypertarget{pam__handle_8c}{}\section{srcs/pam\+\_\+handle.c File Reference}
+\label{pam__handle_8c}\index{srcs/pam\+\_\+handle.\+c@{srcs/pam\+\_\+handle.\+c}}
+{\ttfamily \#include \char`\"{}pamela.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{pam__handle_8c_ae8f377d3b1b2d93ca868987cc22bd8ed}{pam\+\_\+me\+\_\+cleanup} (pam\+\_\+handle\+\_\+t $\ast$pamh, void $\ast$data, int error\+\_\+status)
+\item 
+P\+A\+M\+\_\+\+E\+X\+T\+E\+RN int \hyperlink{pam__handle_8c_a0a4f34ce6c673579a49fe0ababeb2173}{pam\+\_\+sm\+\_\+acct\+\_\+mgmt} (pam\+\_\+handle\+\_\+t $\ast$pamh, int flags, int argc, const char $\ast$$\ast$argv)
+\item 
+P\+A\+M\+\_\+\+E\+X\+T\+E\+RN int \hyperlink{pam__handle_8c_a345d0fd2f2faff30353f2bc09318ce33}{pam\+\_\+sm\+\_\+setcred} (pam\+\_\+handle\+\_\+t $\ast$pamh, int flags, int argc, const char $\ast$$\ast$argv)
+\item 
+P\+A\+M\+\_\+\+E\+X\+T\+E\+RN int \hyperlink{pam__handle_8c_a29b361dfe49f2de2ebf1e0fcaa3900de}{pam\+\_\+sm\+\_\+authenticate} (pam\+\_\+handle\+\_\+t $\ast$pamh, int flags, int argc, const char $\ast$$\ast$argv)
+\item 
+P\+A\+M\+\_\+\+E\+X\+T\+E\+RN int \hyperlink{pam__handle_8c_aefea542ca66671ce68abe09d332e56ae}{pam\+\_\+sm\+\_\+open\+\_\+session} (pam\+\_\+handle\+\_\+t $\ast$pamh, int flags, int argc, const char $\ast$$\ast$argv)
+\item 
+P\+A\+M\+\_\+\+E\+X\+T\+E\+RN int \hyperlink{pam__handle_8c_ac702848c61a55ded7959bc087a9ab1f2}{pam\+\_\+sm\+\_\+close\+\_\+session} (pam\+\_\+handle\+\_\+t $\ast$pamh, int flags, int argc, const char $\ast$$\ast$argv)
+\item 
+P\+A\+M\+\_\+\+E\+X\+T\+E\+RN int \hyperlink{pam__handle_8c_a0bbfb2f2809e71f1488a4db7480e34a0}{pam\+\_\+sm\+\_\+chauthtok} (pam\+\_\+handle\+\_\+t $\ast$pamh, int flags, int argc, const char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{pam__handle_8c_ae8f377d3b1b2d93ca868987cc22bd8ed}\label{pam__handle_8c_ae8f377d3b1b2d93ca868987cc22bd8ed}} 
+\index{pam\+\_\+handle.\+c@{pam\+\_\+handle.\+c}!pam\+\_\+me\+\_\+cleanup@{pam\+\_\+me\+\_\+cleanup}}
+\index{pam\+\_\+me\+\_\+cleanup@{pam\+\_\+me\+\_\+cleanup}!pam\+\_\+handle.\+c@{pam\+\_\+handle.\+c}}
+\subsubsection{\texorpdfstring{pam\+\_\+me\+\_\+cleanup()}{pam\_me\_cleanup()}}
+{\footnotesize\ttfamily void pam\+\_\+me\+\_\+cleanup (\begin{DoxyParamCaption}\item[{pam\+\_\+handle\+\_\+t $\ast$}]{pamh,  }\item[{void $\ast$}]{data,  }\item[{int}]{error\+\_\+status }\end{DoxyParamCaption})}
+
+P\+AM Clean up for pam data 
+\begin{DoxyParams}{Parameters}
+{\em pamh} & \\
+\hline
+{\em data} & \\
+\hline
+{\em error\+\_\+status} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file pam\+\_\+handle.\+c.
+
+\mbox{\Hypertarget{pam__handle_8c_a0a4f34ce6c673579a49fe0ababeb2173}\label{pam__handle_8c_a0a4f34ce6c673579a49fe0ababeb2173}} 
+\index{pam\+\_\+handle.\+c@{pam\+\_\+handle.\+c}!pam\+\_\+sm\+\_\+acct\+\_\+mgmt@{pam\+\_\+sm\+\_\+acct\+\_\+mgmt}}
+\index{pam\+\_\+sm\+\_\+acct\+\_\+mgmt@{pam\+\_\+sm\+\_\+acct\+\_\+mgmt}!pam\+\_\+handle.\+c@{pam\+\_\+handle.\+c}}
+\subsubsection{\texorpdfstring{pam\+\_\+sm\+\_\+acct\+\_\+mgmt()}{pam\_sm\_acct\_mgmt()}}
+{\footnotesize\ttfamily P\+A\+M\+\_\+\+E\+X\+T\+E\+RN int pam\+\_\+sm\+\_\+acct\+\_\+mgmt (\begin{DoxyParamCaption}\item[{pam\+\_\+handle\+\_\+t $\ast$}]{pamh,  }\item[{int}]{flags,  }\item[{int}]{argc,  }\item[{const char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+P\+AM Account 
+\begin{DoxyParams}{Parameters}
+{\em pamh} & \\
+\hline
+{\em flags} & \\
+\hline
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 37 of file pam\+\_\+handle.\+c.
+
+\mbox{\Hypertarget{pam__handle_8c_a29b361dfe49f2de2ebf1e0fcaa3900de}\label{pam__handle_8c_a29b361dfe49f2de2ebf1e0fcaa3900de}} 
+\index{pam\+\_\+handle.\+c@{pam\+\_\+handle.\+c}!pam\+\_\+sm\+\_\+authenticate@{pam\+\_\+sm\+\_\+authenticate}}
+\index{pam\+\_\+sm\+\_\+authenticate@{pam\+\_\+sm\+\_\+authenticate}!pam\+\_\+handle.\+c@{pam\+\_\+handle.\+c}}
+\subsubsection{\texorpdfstring{pam\+\_\+sm\+\_\+authenticate()}{pam\_sm\_authenticate()}}
+{\footnotesize\ttfamily P\+A\+M\+\_\+\+E\+X\+T\+E\+RN int pam\+\_\+sm\+\_\+authenticate (\begin{DoxyParamCaption}\item[{pam\+\_\+handle\+\_\+t $\ast$}]{pamh,  }\item[{int}]{flags,  }\item[{int}]{argc,  }\item[{const char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+P\+AM Login 
+\begin{DoxyParams}{Parameters}
+{\em pamh} & \\
+\hline
+{\em flags} & \\
+\hline
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 69 of file pam\+\_\+handle.\+c.
+
+\mbox{\Hypertarget{pam__handle_8c_a0bbfb2f2809e71f1488a4db7480e34a0}\label{pam__handle_8c_a0bbfb2f2809e71f1488a4db7480e34a0}} 
+\index{pam\+\_\+handle.\+c@{pam\+\_\+handle.\+c}!pam\+\_\+sm\+\_\+chauthtok@{pam\+\_\+sm\+\_\+chauthtok}}
+\index{pam\+\_\+sm\+\_\+chauthtok@{pam\+\_\+sm\+\_\+chauthtok}!pam\+\_\+handle.\+c@{pam\+\_\+handle.\+c}}
+\subsubsection{\texorpdfstring{pam\+\_\+sm\+\_\+chauthtok()}{pam\_sm\_chauthtok()}}
+{\footnotesize\ttfamily P\+A\+M\+\_\+\+E\+X\+T\+E\+RN int pam\+\_\+sm\+\_\+chauthtok (\begin{DoxyParamCaption}\item[{pam\+\_\+handle\+\_\+t $\ast$}]{pamh,  }\item[{int}]{flags,  }\item[{int}]{argc,  }\item[{const char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+P\+AM Auth tok change 
+\begin{DoxyParams}{Parameters}
+{\em pamh} & \\
+\hline
+{\em flags} & \\
+\hline
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 148 of file pam\+\_\+handle.\+c.
+
+\mbox{\Hypertarget{pam__handle_8c_ac702848c61a55ded7959bc087a9ab1f2}\label{pam__handle_8c_ac702848c61a55ded7959bc087a9ab1f2}} 
+\index{pam\+\_\+handle.\+c@{pam\+\_\+handle.\+c}!pam\+\_\+sm\+\_\+close\+\_\+session@{pam\+\_\+sm\+\_\+close\+\_\+session}}
+\index{pam\+\_\+sm\+\_\+close\+\_\+session@{pam\+\_\+sm\+\_\+close\+\_\+session}!pam\+\_\+handle.\+c@{pam\+\_\+handle.\+c}}
+\subsubsection{\texorpdfstring{pam\+\_\+sm\+\_\+close\+\_\+session()}{pam\_sm\_close\_session()}}
+{\footnotesize\ttfamily P\+A\+M\+\_\+\+E\+X\+T\+E\+RN int pam\+\_\+sm\+\_\+close\+\_\+session (\begin{DoxyParamCaption}\item[{pam\+\_\+handle\+\_\+t $\ast$}]{pamh,  }\item[{int}]{flags,  }\item[{int}]{argc,  }\item[{const char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+P\+AM Close session 
+\begin{DoxyParams}{Parameters}
+{\em pamh} & \\
+\hline
+{\em flags} & \\
+\hline
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 124 of file pam\+\_\+handle.\+c.
+
+\mbox{\Hypertarget{pam__handle_8c_aefea542ca66671ce68abe09d332e56ae}\label{pam__handle_8c_aefea542ca66671ce68abe09d332e56ae}} 
+\index{pam\+\_\+handle.\+c@{pam\+\_\+handle.\+c}!pam\+\_\+sm\+\_\+open\+\_\+session@{pam\+\_\+sm\+\_\+open\+\_\+session}}
+\index{pam\+\_\+sm\+\_\+open\+\_\+session@{pam\+\_\+sm\+\_\+open\+\_\+session}!pam\+\_\+handle.\+c@{pam\+\_\+handle.\+c}}
+\subsubsection{\texorpdfstring{pam\+\_\+sm\+\_\+open\+\_\+session()}{pam\_sm\_open\_session()}}
+{\footnotesize\ttfamily P\+A\+M\+\_\+\+E\+X\+T\+E\+RN int pam\+\_\+sm\+\_\+open\+\_\+session (\begin{DoxyParamCaption}\item[{pam\+\_\+handle\+\_\+t $\ast$}]{pamh,  }\item[{int}]{flags,  }\item[{int}]{argc,  }\item[{const char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+P\+AM Open session 
+\begin{DoxyParams}{Parameters}
+{\em pamh} & \\
+\hline
+{\em flags} & \\
+\hline
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 96 of file pam\+\_\+handle.\+c.
+
+\mbox{\Hypertarget{pam__handle_8c_a345d0fd2f2faff30353f2bc09318ce33}\label{pam__handle_8c_a345d0fd2f2faff30353f2bc09318ce33}} 
+\index{pam\+\_\+handle.\+c@{pam\+\_\+handle.\+c}!pam\+\_\+sm\+\_\+setcred@{pam\+\_\+sm\+\_\+setcred}}
+\index{pam\+\_\+sm\+\_\+setcred@{pam\+\_\+sm\+\_\+setcred}!pam\+\_\+handle.\+c@{pam\+\_\+handle.\+c}}
+\subsubsection{\texorpdfstring{pam\+\_\+sm\+\_\+setcred()}{pam\_sm\_setcred()}}
+{\footnotesize\ttfamily P\+A\+M\+\_\+\+E\+X\+T\+E\+RN int pam\+\_\+sm\+\_\+setcred (\begin{DoxyParamCaption}\item[{pam\+\_\+handle\+\_\+t $\ast$}]{pamh,  }\item[{int}]{flags,  }\item[{int}]{argc,  }\item[{const char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+P\+AM Change password 
+\begin{DoxyParams}{Parameters}
+{\em pamh} & \\
+\hline
+{\em flags} & \\
+\hline
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 53 of file pam\+\_\+handle.\+c.
+

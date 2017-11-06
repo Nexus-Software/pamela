@@ -1,0 +1,79 @@
+\hypertarget{secure__volume_8c}{}\section{srcs/secure\+\_\+volume.c File Reference}
+\label{secure__volume_8c}\index{srcs/secure\+\_\+volume.\+c@{srcs/secure\+\_\+volume.\+c}}
+{\ttfamily \#include \char`\"{}pamela.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{secure__volume_8c_ae50f67c9b95f664f340175bd7ab2aa29}{secure\+\_\+volume\+\_\+open} (const char $\ast$user, const char $\ast$pass)
+\item 
+int \hyperlink{secure__volume_8c_ac27e3c8621e5462592124308e272dbaa}{secure\+\_\+volume\+\_\+change\+\_\+mdp} (const char $\ast$user, const char $\ast$pass\+\_\+old, const char $\ast$pass\+\_\+new)
+\item 
+int \hyperlink{secure__volume_8c_a91dec481e3d1eb64d1f995514fe03b17}{secure\+\_\+volume\+\_\+format} (const char $\ast$user, const char $\ast$pass)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{secure__volume_8c_ac27e3c8621e5462592124308e272dbaa}\label{secure__volume_8c_ac27e3c8621e5462592124308e272dbaa}} 
+\index{secure\+\_\+volume.\+c@{secure\+\_\+volume.\+c}!secure\+\_\+volume\+\_\+change\+\_\+mdp@{secure\+\_\+volume\+\_\+change\+\_\+mdp}}
+\index{secure\+\_\+volume\+\_\+change\+\_\+mdp@{secure\+\_\+volume\+\_\+change\+\_\+mdp}!secure\+\_\+volume.\+c@{secure\+\_\+volume.\+c}}
+\subsubsection{\texorpdfstring{secure\+\_\+volume\+\_\+change\+\_\+mdp()}{secure\_volume\_change\_mdp()}}
+{\footnotesize\ttfamily int secure\+\_\+volume\+\_\+change\+\_\+mdp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{user,  }\item[{const char $\ast$}]{pass\+\_\+old,  }\item[{const char $\ast$}]{pass\+\_\+new }\end{DoxyParamCaption})}
+
+Change key for secure volume user 
+\begin{DoxyParams}{Parameters}
+{\em user} & username \\
+\hline
+{\em pass\+\_\+old} & old password \\
+\hline
+{\em pass\+\_\+new} & new password \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 (success) / -\/1 (error) 
+
+
+\end{DoxyReturn}
+
+
+Definition at line 43 of file secure\+\_\+volume.\+c.
+
+\mbox{\Hypertarget{secure__volume_8c_a91dec481e3d1eb64d1f995514fe03b17}\label{secure__volume_8c_a91dec481e3d1eb64d1f995514fe03b17}} 
+\index{secure\+\_\+volume.\+c@{secure\+\_\+volume.\+c}!secure\+\_\+volume\+\_\+format@{secure\+\_\+volume\+\_\+format}}
+\index{secure\+\_\+volume\+\_\+format@{secure\+\_\+volume\+\_\+format}!secure\+\_\+volume.\+c@{secure\+\_\+volume.\+c}}
+\subsubsection{\texorpdfstring{secure\+\_\+volume\+\_\+format()}{secure\_volume\_format()}}
+{\footnotesize\ttfamily int secure\+\_\+volume\+\_\+format (\begin{DoxyParamCaption}\item[{const char $\ast$}]{user,  }\item[{const char $\ast$}]{pass }\end{DoxyParamCaption})}
+
+Format secure volume 
+\begin{DoxyParams}{Parameters}
+{\em user} & username \\
+\hline
+{\em pass} & password \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 67 of file secure\+\_\+volume.\+c.
+
+\mbox{\Hypertarget{secure__volume_8c_ae50f67c9b95f664f340175bd7ab2aa29}\label{secure__volume_8c_ae50f67c9b95f664f340175bd7ab2aa29}} 
+\index{secure\+\_\+volume.\+c@{secure\+\_\+volume.\+c}!secure\+\_\+volume\+\_\+open@{secure\+\_\+volume\+\_\+open}}
+\index{secure\+\_\+volume\+\_\+open@{secure\+\_\+volume\+\_\+open}!secure\+\_\+volume.\+c@{secure\+\_\+volume.\+c}}
+\subsubsection{\texorpdfstring{secure\+\_\+volume\+\_\+open()}{secure\_volume\_open()}}
+{\footnotesize\ttfamily int secure\+\_\+volume\+\_\+open (\begin{DoxyParamCaption}\item[{const char $\ast$}]{user,  }\item[{const char $\ast$}]{pass }\end{DoxyParamCaption})}
+
+Open secure volume user 
+\begin{DoxyParams}{Parameters}
+{\em user} & username \\
+\hline
+{\em pass} & password \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 (success) / -\/1 (error) 
+\end{DoxyReturn}
+
+
+Definition at line 19 of file secure\+\_\+volume.\+c.
+

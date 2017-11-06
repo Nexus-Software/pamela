@@ -1,0 +1,182 @@
+.TH "srcs/pam_handle.c" 3 "Mon Nov 6 2017" "Version 1.0.0" "pamela" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+srcs/pam_handle.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'pamela\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBpam_me_cleanup\fP (pam_handle_t *pamh, void *data, int error_status)"
+.br
+.ti -1c
+.RI "PAM_EXTERN int \fBpam_sm_acct_mgmt\fP (pam_handle_t *pamh, int flags, int argc, const char **argv)"
+.br
+.ti -1c
+.RI "PAM_EXTERN int \fBpam_sm_setcred\fP (pam_handle_t *pamh, int flags, int argc, const char **argv)"
+.br
+.ti -1c
+.RI "PAM_EXTERN int \fBpam_sm_authenticate\fP (pam_handle_t *pamh, int flags, int argc, const char **argv)"
+.br
+.ti -1c
+.RI "PAM_EXTERN int \fBpam_sm_open_session\fP (pam_handle_t *pamh, int flags, int argc, const char **argv)"
+.br
+.ti -1c
+.RI "PAM_EXTERN int \fBpam_sm_close_session\fP (pam_handle_t *pamh, int flags, int argc, const char **argv)"
+.br
+.ti -1c
+.RI "PAM_EXTERN int \fBpam_sm_chauthtok\fP (pam_handle_t *pamh, int flags, int argc, const char **argv)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void pam_me_cleanup (pam_handle_t * pamh, void * data, int error_status)"
+PAM Clean up for pam data 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpamh\fP 
+.br
+\fIdata\fP 
+.br
+\fIerror_status\fP 
+.RE
+.PP
+
+.PP
+Definition at line 19 of file pam_handle\&.c\&.
+.SS "PAM_EXTERN int pam_sm_acct_mgmt (pam_handle_t * pamh, int flags, int argc, const char ** argv)"
+PAM Account 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpamh\fP 
+.br
+\fIflags\fP 
+.br
+\fIargc\fP 
+.br
+\fIargv\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 37 of file pam_handle\&.c\&.
+.SS "PAM_EXTERN int pam_sm_authenticate (pam_handle_t * pamh, int flags, int argc, const char ** argv)"
+PAM Login 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpamh\fP 
+.br
+\fIflags\fP 
+.br
+\fIargc\fP 
+.br
+\fIargv\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 69 of file pam_handle\&.c\&.
+.SS "PAM_EXTERN int pam_sm_chauthtok (pam_handle_t * pamh, int flags, int argc, const char ** argv)"
+PAM Auth tok change 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpamh\fP 
+.br
+\fIflags\fP 
+.br
+\fIargc\fP 
+.br
+\fIargv\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 148 of file pam_handle\&.c\&.
+.SS "PAM_EXTERN int pam_sm_close_session (pam_handle_t * pamh, int flags, int argc, const char ** argv)"
+PAM Close session 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpamh\fP 
+.br
+\fIflags\fP 
+.br
+\fIargc\fP 
+.br
+\fIargv\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 124 of file pam_handle\&.c\&.
+.SS "PAM_EXTERN int pam_sm_open_session (pam_handle_t * pamh, int flags, int argc, const char ** argv)"
+PAM Open session 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpamh\fP 
+.br
+\fIflags\fP 
+.br
+\fIargc\fP 
+.br
+\fIargv\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 96 of file pam_handle\&.c\&.
+.SS "PAM_EXTERN int pam_sm_setcred (pam_handle_t * pamh, int flags, int argc, const char ** argv)"
+PAM Change password 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpamh\fP 
+.br
+\fIflags\fP 
+.br
+\fIargc\fP 
+.br
+\fIargv\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 53 of file pam_handle\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for pamela from the source code\&.

@@ -1,0 +1,244 @@
+\hypertarget{pamela_8h}{}\section{includes/pamela.h File Reference}
+\label{pamela_8h}\index{includes/pamela.\+h@{includes/pamela.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$security/pam\+\_\+appl.\+h$>$}\newline
+{\ttfamily \#include $<$security/pam\+\_\+modules.\+h$>$}\newline
+{\ttfamily \#include $<$security/pam\+\_\+ext.\+h$>$}\newline
+{\ttfamily \#include $<$libcryptsetup.\+h$>$}\newline
+{\ttfamily \#include $<$pwd.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pamela_8h_a198ab26a855e16b0f164e8f011118d59}{P\+A\+M\+\_\+\+S\+M\+\_\+\+P\+A\+S\+S\+W\+O\+RD}
+\item 
+\#define \hyperlink{pamela_8h_aa7f312c1893e75ec4416ffbe6202fb60}{P\+A\+M\+\_\+\+S\+M\+\_\+\+S\+E\+S\+S\+I\+ON}
+\item 
+\#define \hyperlink{pamela_8h_adb300d8656511533be30a45d7e1a8e43}{P\+A\+M\+\_\+\+S\+M\+\_\+\+A\+U\+TH}
+\item 
+\#define \hyperlink{pamela_8h_a0ebda8822b7fdfa5452de792b426603e}{P\+A\+M\+\_\+\+S\+M\+\_\+\+A\+C\+C\+O\+U\+NT}
+\item 
+\#define \hyperlink{pamela_8h_a6b20d41d6252e9871430c242cb1a56e7}{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~512
+\item 
+\#define \hyperlink{pamela_8h_a7b13c911459a7b7a6607e67570349b50}{C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+S\+I\+ZE}~100
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{pamela_8h_a31505c8851f487a723d97e73eab33101}{open\+\_\+container} (const char $\ast$, const char $\ast$)
+\item 
+int \hyperlink{pamela_8h_a7706984d7c0a65201e039d08a76692ca}{close\+\_\+container} (const char $\ast$)
+\item 
+int \hyperlink{pamela_8h_a709709d417ef91d09729e0cbf24d0dce}{change\+\_\+container\+\_\+mdp} (const char $\ast$, const char $\ast$, const char $\ast$)
+\item 
+int \hyperlink{pamela_8h_ae50f67c9b95f664f340175bd7ab2aa29}{secure\+\_\+volume\+\_\+open} (const char $\ast$user, const char $\ast$pass)
+\item 
+int \hyperlink{pamela_8h_ac27e3c8621e5462592124308e272dbaa}{secure\+\_\+volume\+\_\+change\+\_\+mdp} (const char $\ast$user, const char $\ast$pass\+\_\+old, const char $\ast$pass\+\_\+new)
+\item 
+int \hyperlink{pamela_8h_a91dec481e3d1eb64d1f995514fe03b17}{secure\+\_\+volume\+\_\+format} (const char $\ast$user, const char $\ast$pass)
+\item 
+const char $\ast$ \hyperlink{pamela_8h_afef4a4f4436f8ad22fae354fd1366bf7}{get\+\_\+user\+\_\+home} (const char $\ast$user)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{pamela_8h_a6b20d41d6252e9871430c242cb1a56e7}\label{pamela_8h_a6b20d41d6252e9871430c242cb1a56e7}} 
+\index{pamela.\+h@{pamela.\+h}!B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}
+\index{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}!pamela.\+h@{pamela.\+h}}
+\subsubsection{\texorpdfstring{B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}{BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE~512}
+
+
+
+Definition at line 33 of file pamela.\+h.
+
+\mbox{\Hypertarget{pamela_8h_a7b13c911459a7b7a6607e67570349b50}\label{pamela_8h_a7b13c911459a7b7a6607e67570349b50}} 
+\index{pamela.\+h@{pamela.\+h}!C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+S\+I\+ZE@{C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+S\+I\+ZE}}
+\index{C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+S\+I\+ZE@{C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+S\+I\+ZE}!pamela.\+h@{pamela.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+S\+I\+ZE}{CONTAINER\_SIZE}}
+{\footnotesize\ttfamily \#define C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+S\+I\+ZE~100}
+
+
+
+Definition at line 34 of file pamela.\+h.
+
+\mbox{\Hypertarget{pamela_8h_a0ebda8822b7fdfa5452de792b426603e}\label{pamela_8h_a0ebda8822b7fdfa5452de792b426603e}} 
+\index{pamela.\+h@{pamela.\+h}!P\+A\+M\+\_\+\+S\+M\+\_\+\+A\+C\+C\+O\+U\+NT@{P\+A\+M\+\_\+\+S\+M\+\_\+\+A\+C\+C\+O\+U\+NT}}
+\index{P\+A\+M\+\_\+\+S\+M\+\_\+\+A\+C\+C\+O\+U\+NT@{P\+A\+M\+\_\+\+S\+M\+\_\+\+A\+C\+C\+O\+U\+NT}!pamela.\+h@{pamela.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+M\+\_\+\+S\+M\+\_\+\+A\+C\+C\+O\+U\+NT}{PAM\_SM\_ACCOUNT}}
+{\footnotesize\ttfamily \#define P\+A\+M\+\_\+\+S\+M\+\_\+\+A\+C\+C\+O\+U\+NT}
+
+
+
+Definition at line 23 of file pamela.\+h.
+
+\mbox{\Hypertarget{pamela_8h_adb300d8656511533be30a45d7e1a8e43}\label{pamela_8h_adb300d8656511533be30a45d7e1a8e43}} 
+\index{pamela.\+h@{pamela.\+h}!P\+A\+M\+\_\+\+S\+M\+\_\+\+A\+U\+TH@{P\+A\+M\+\_\+\+S\+M\+\_\+\+A\+U\+TH}}
+\index{P\+A\+M\+\_\+\+S\+M\+\_\+\+A\+U\+TH@{P\+A\+M\+\_\+\+S\+M\+\_\+\+A\+U\+TH}!pamela.\+h@{pamela.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+M\+\_\+\+S\+M\+\_\+\+A\+U\+TH}{PAM\_SM\_AUTH}}
+{\footnotesize\ttfamily \#define P\+A\+M\+\_\+\+S\+M\+\_\+\+A\+U\+TH}
+
+
+
+Definition at line 22 of file pamela.\+h.
+
+\mbox{\Hypertarget{pamela_8h_a198ab26a855e16b0f164e8f011118d59}\label{pamela_8h_a198ab26a855e16b0f164e8f011118d59}} 
+\index{pamela.\+h@{pamela.\+h}!P\+A\+M\+\_\+\+S\+M\+\_\+\+P\+A\+S\+S\+W\+O\+RD@{P\+A\+M\+\_\+\+S\+M\+\_\+\+P\+A\+S\+S\+W\+O\+RD}}
+\index{P\+A\+M\+\_\+\+S\+M\+\_\+\+P\+A\+S\+S\+W\+O\+RD@{P\+A\+M\+\_\+\+S\+M\+\_\+\+P\+A\+S\+S\+W\+O\+RD}!pamela.\+h@{pamela.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+M\+\_\+\+S\+M\+\_\+\+P\+A\+S\+S\+W\+O\+RD}{PAM\_SM\_PASSWORD}}
+{\footnotesize\ttfamily \#define P\+A\+M\+\_\+\+S\+M\+\_\+\+P\+A\+S\+S\+W\+O\+RD}
+
+
+
+Definition at line 20 of file pamela.\+h.
+
+\mbox{\Hypertarget{pamela_8h_aa7f312c1893e75ec4416ffbe6202fb60}\label{pamela_8h_aa7f312c1893e75ec4416ffbe6202fb60}} 
+\index{pamela.\+h@{pamela.\+h}!P\+A\+M\+\_\+\+S\+M\+\_\+\+S\+E\+S\+S\+I\+ON@{P\+A\+M\+\_\+\+S\+M\+\_\+\+S\+E\+S\+S\+I\+ON}}
+\index{P\+A\+M\+\_\+\+S\+M\+\_\+\+S\+E\+S\+S\+I\+ON@{P\+A\+M\+\_\+\+S\+M\+\_\+\+S\+E\+S\+S\+I\+ON}!pamela.\+h@{pamela.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+M\+\_\+\+S\+M\+\_\+\+S\+E\+S\+S\+I\+ON}{PAM\_SM\_SESSION}}
+{\footnotesize\ttfamily \#define P\+A\+M\+\_\+\+S\+M\+\_\+\+S\+E\+S\+S\+I\+ON}
+
+
+
+Definition at line 21 of file pamela.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{pamela_8h_a709709d417ef91d09729e0cbf24d0dce}\label{pamela_8h_a709709d417ef91d09729e0cbf24d0dce}} 
+\index{pamela.\+h@{pamela.\+h}!change\+\_\+container\+\_\+mdp@{change\+\_\+container\+\_\+mdp}}
+\index{change\+\_\+container\+\_\+mdp@{change\+\_\+container\+\_\+mdp}!pamela.\+h@{pamela.\+h}}
+\subsubsection{\texorpdfstring{change\+\_\+container\+\_\+mdp()}{change\_container\_mdp()}}
+{\footnotesize\ttfamily int change\+\_\+container\+\_\+mdp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{user,  }\item[{const char $\ast$}]{old\+\_\+mdp,  }\item[{const char $\ast$}]{new\+\_\+mdp }\end{DoxyParamCaption})}
+
+Change key of container 
+\begin{DoxyParams}{Parameters}
+{\em user} & \\
+\hline
+{\em old\+\_\+mdp} & \\
+\hline
+{\em new\+\_\+mdp} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 60 of file container.\+c.
+
+\mbox{\Hypertarget{pamela_8h_a7706984d7c0a65201e039d08a76692ca}\label{pamela_8h_a7706984d7c0a65201e039d08a76692ca}} 
+\index{pamela.\+h@{pamela.\+h}!close\+\_\+container@{close\+\_\+container}}
+\index{close\+\_\+container@{close\+\_\+container}!pamela.\+h@{pamela.\+h}}
+\subsubsection{\texorpdfstring{close\+\_\+container()}{close\_container()}}
+{\footnotesize\ttfamily int close\+\_\+container (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 67 of file container.\+c.
+
+\mbox{\Hypertarget{pamela_8h_afef4a4f4436f8ad22fae354fd1366bf7}\label{pamela_8h_afef4a4f4436f8ad22fae354fd1366bf7}} 
+\index{pamela.\+h@{pamela.\+h}!get\+\_\+user\+\_\+home@{get\+\_\+user\+\_\+home}}
+\index{get\+\_\+user\+\_\+home@{get\+\_\+user\+\_\+home}!pamela.\+h@{pamela.\+h}}
+\subsubsection{\texorpdfstring{get\+\_\+user\+\_\+home()}{get\_user\_home()}}
+{\footnotesize\ttfamily const char$\ast$ get\+\_\+user\+\_\+home (\begin{DoxyParamCaption}\item[{const char $\ast$}]{user }\end{DoxyParamCaption})}
+
+Get home for dir to username 
+\begin{DoxyParams}{Parameters}
+{\em user} & username \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char $\ast$home\+\_\+dir (home dir path) / N\+U\+LL (if not found) 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file utils.\+c.
+
+\mbox{\Hypertarget{pamela_8h_a31505c8851f487a723d97e73eab33101}\label{pamela_8h_a31505c8851f487a723d97e73eab33101}} 
+\index{pamela.\+h@{pamela.\+h}!open\+\_\+container@{open\+\_\+container}}
+\index{open\+\_\+container@{open\+\_\+container}!pamela.\+h@{pamela.\+h}}
+\subsubsection{\texorpdfstring{open\+\_\+container()}{open\_container()}}
+{\footnotesize\ttfamily int open\+\_\+container (\begin{DoxyParamCaption}\item[{const char $\ast$}]{user,  }\item[{const char $\ast$}]{pass }\end{DoxyParamCaption})}
+
+Open container (open secure + mount + setup access) 
+\begin{DoxyParams}{Parameters}
+{\em user} & \\
+\hline
+{\em pass} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 82 of file container.\+c.
+
+\mbox{\Hypertarget{pamela_8h_ac27e3c8621e5462592124308e272dbaa}\label{pamela_8h_ac27e3c8621e5462592124308e272dbaa}} 
+\index{pamela.\+h@{pamela.\+h}!secure\+\_\+volume\+\_\+change\+\_\+mdp@{secure\+\_\+volume\+\_\+change\+\_\+mdp}}
+\index{secure\+\_\+volume\+\_\+change\+\_\+mdp@{secure\+\_\+volume\+\_\+change\+\_\+mdp}!pamela.\+h@{pamela.\+h}}
+\subsubsection{\texorpdfstring{secure\+\_\+volume\+\_\+change\+\_\+mdp()}{secure\_volume\_change\_mdp()}}
+{\footnotesize\ttfamily int secure\+\_\+volume\+\_\+change\+\_\+mdp (\begin{DoxyParamCaption}\item[{const char $\ast$}]{user,  }\item[{const char $\ast$}]{pass\+\_\+old,  }\item[{const char $\ast$}]{pass\+\_\+new }\end{DoxyParamCaption})}
+
+Change key for secure volume user 
+\begin{DoxyParams}{Parameters}
+{\em user} & username \\
+\hline
+{\em pass\+\_\+old} & old password \\
+\hline
+{\em pass\+\_\+new} & new password \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 (success) / -\/1 (error) 
+
+
+\end{DoxyReturn}
+
+
+Definition at line 43 of file secure\+\_\+volume.\+c.
+
+\mbox{\Hypertarget{pamela_8h_a91dec481e3d1eb64d1f995514fe03b17}\label{pamela_8h_a91dec481e3d1eb64d1f995514fe03b17}} 
+\index{pamela.\+h@{pamela.\+h}!secure\+\_\+volume\+\_\+format@{secure\+\_\+volume\+\_\+format}}
+\index{secure\+\_\+volume\+\_\+format@{secure\+\_\+volume\+\_\+format}!pamela.\+h@{pamela.\+h}}
+\subsubsection{\texorpdfstring{secure\+\_\+volume\+\_\+format()}{secure\_volume\_format()}}
+{\footnotesize\ttfamily int secure\+\_\+volume\+\_\+format (\begin{DoxyParamCaption}\item[{const char $\ast$}]{user,  }\item[{const char $\ast$}]{pass }\end{DoxyParamCaption})}
+
+Format secure volume 
+\begin{DoxyParams}{Parameters}
+{\em user} & username \\
+\hline
+{\em pass} & password \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 67 of file secure\+\_\+volume.\+c.
+
+\mbox{\Hypertarget{pamela_8h_ae50f67c9b95f664f340175bd7ab2aa29}\label{pamela_8h_ae50f67c9b95f664f340175bd7ab2aa29}} 
+\index{pamela.\+h@{pamela.\+h}!secure\+\_\+volume\+\_\+open@{secure\+\_\+volume\+\_\+open}}
+\index{secure\+\_\+volume\+\_\+open@{secure\+\_\+volume\+\_\+open}!pamela.\+h@{pamela.\+h}}
+\subsubsection{\texorpdfstring{secure\+\_\+volume\+\_\+open()}{secure\_volume\_open()}}
+{\footnotesize\ttfamily int secure\+\_\+volume\+\_\+open (\begin{DoxyParamCaption}\item[{const char $\ast$}]{user,  }\item[{const char $\ast$}]{pass }\end{DoxyParamCaption})}
+
+Open secure volume user 
+\begin{DoxyParams}{Parameters}
+{\em user} & username \\
+\hline
+{\em pass} & password \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 (success) / -\/1 (error) 
+\end{DoxyReturn}
+
+
+Definition at line 19 of file secure\+\_\+volume.\+c.
+

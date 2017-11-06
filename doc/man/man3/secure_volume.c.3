@@ -1,0 +1,85 @@
+.TH "srcs/secure_volume.c" 3 "Mon Nov 6 2017" "Version 1.0.0" "pamela" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+srcs/secure_volume.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'pamela\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBsecure_volume_open\fP (const char *user, const char *pass)"
+.br
+.ti -1c
+.RI "int \fBsecure_volume_change_mdp\fP (const char *user, const char *pass_old, const char *pass_new)"
+.br
+.ti -1c
+.RI "int \fBsecure_volume_format\fP (const char *user, const char *pass)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int secure_volume_change_mdp (const char * user, const char * pass_old, const char * pass_new)"
+Change key for secure volume user 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP username 
+.br
+\fIpass_old\fP old password 
+.br
+\fIpass_new\fP new password 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 (success) / -1 (error) 
+.PP
+.RE
+.PP
+
+.PP
+Definition at line 43 of file secure_volume\&.c\&.
+.SS "int secure_volume_format (const char * user, const char * pass)"
+Format secure volume 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP username 
+.br
+\fIpass\fP password 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 67 of file secure_volume\&.c\&.
+.SS "int secure_volume_open (const char * user, const char * pass)"
+Open secure volume user 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP username 
+.br
+\fIpass\fP password 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 (success) / -1 (error) 
+.RE
+.PP
+
+.PP
+Definition at line 19 of file secure_volume\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for pamela from the source code\&.

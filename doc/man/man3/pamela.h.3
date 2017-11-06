@@ -1,0 +1,219 @@
+.TH "includes/pamela.h" 3 "Mon Nov 6 2017" "Version 1.0.0" "pamela" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+includes/pamela.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdarg\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <security/pam_appl\&.h>\fP
+.br
+\fC#include <security/pam_modules\&.h>\fP
+.br
+\fC#include <security/pam_ext\&.h>\fP
+.br
+\fC#include <libcryptsetup\&.h>\fP
+.br
+\fC#include <pwd\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPAM_SM_PASSWORD\fP"
+.br
+.ti -1c
+.RI "#define \fBPAM_SM_SESSION\fP"
+.br
+.ti -1c
+.RI "#define \fBPAM_SM_AUTH\fP"
+.br
+.ti -1c
+.RI "#define \fBPAM_SM_ACCOUNT\fP"
+.br
+.ti -1c
+.RI "#define \fBBUFFER_SIZE\fP   512"
+.br
+.ti -1c
+.RI "#define \fBCONTAINER_SIZE\fP   100"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBopen_container\fP (const char *, const char *)"
+.br
+.ti -1c
+.RI "int \fBclose_container\fP (const char *)"
+.br
+.ti -1c
+.RI "int \fBchange_container_mdp\fP (const char *, const char *, const char *)"
+.br
+.ti -1c
+.RI "int \fBsecure_volume_open\fP (const char *user, const char *pass)"
+.br
+.ti -1c
+.RI "int \fBsecure_volume_change_mdp\fP (const char *user, const char *pass_old, const char *pass_new)"
+.br
+.ti -1c
+.RI "int \fBsecure_volume_format\fP (const char *user, const char *pass)"
+.br
+.ti -1c
+.RI "const char * \fBget_user_home\fP (const char *user)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BUFFER_SIZE   512"
+
+.PP
+Definition at line 33 of file pamela\&.h\&.
+.SS "#define CONTAINER_SIZE   100"
+
+.PP
+Definition at line 34 of file pamela\&.h\&.
+.SS "#define PAM_SM_ACCOUNT"
+
+.PP
+Definition at line 23 of file pamela\&.h\&.
+.SS "#define PAM_SM_AUTH"
+
+.PP
+Definition at line 22 of file pamela\&.h\&.
+.SS "#define PAM_SM_PASSWORD"
+
+.PP
+Definition at line 20 of file pamela\&.h\&.
+.SS "#define PAM_SM_SESSION"
+
+.PP
+Definition at line 21 of file pamela\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "int change_container_mdp (const char * user, const char * old_mdp, const char * new_mdp)"
+Change key of container 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP 
+.br
+\fIold_mdp\fP 
+.br
+\fInew_mdp\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 60 of file container\&.c\&.
+.SS "int close_container (const char *)"
+
+.PP
+Definition at line 67 of file container\&.c\&.
+.SS "const char* get_user_home (const char * user)"
+Get home for dir to username 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP username 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+char *home_dir (home dir path) / NULL (if not found) 
+.RE
+.PP
+
+.PP
+Definition at line 18 of file utils\&.c\&.
+.SS "int open_container (const char * user, const char * pass)"
+Open container (open secure + mount + setup access) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP 
+.br
+\fIpass\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 82 of file container\&.c\&.
+.SS "int secure_volume_change_mdp (const char * user, const char * pass_old, const char * pass_new)"
+Change key for secure volume user 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP username 
+.br
+\fIpass_old\fP old password 
+.br
+\fIpass_new\fP new password 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 (success) / -1 (error) 
+.PP
+.RE
+.PP
+
+.PP
+Definition at line 43 of file secure_volume\&.c\&.
+.SS "int secure_volume_format (const char * user, const char * pass)"
+Format secure volume 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP username 
+.br
+\fIpass\fP password 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.PP
+Definition at line 67 of file secure_volume\&.c\&.
+.SS "int secure_volume_open (const char * user, const char * pass)"
+Open secure volume user 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuser\fP username 
+.br
+\fIpass\fP password 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 (success) / -1 (error) 
+.RE
+.PP
+
+.PP
+Definition at line 19 of file secure_volume\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for pamela from the source code\&.
