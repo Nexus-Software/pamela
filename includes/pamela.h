@@ -31,7 +31,7 @@
 #include <pwd.h>
 
 #define BUFFER_SIZE     512
-#define CONTAINER_SIZE  100
+#define CONTAINER_SIZE  1024
 
 int		open_container(const char*, const char*);
 int		close_container(const char*);

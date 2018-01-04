@@ -39,14 +39,20 @@ static int   execute_cmd(const char *tmp, ...)
  */
 static int  create_container(const char *volume_path, const char *user, const char *pass)
 {
+  uid_t		uid = getuid();
+
+  if (setuid(0) != 0)
+    return (-1);
   if (execute_cmd("dd if=/dev/urandom bs=1M count=%d of=%s", CONTAINER_SIZE, volume_path) != 0 ||
 	  secure_volume_format(user, pass) != 0 ||
 	  secure_volume_open(user, pass) != 0 ||
 	  execute_cmd("mkfs.ext4 /dev/mapper/%s_container", user) != 0 ||
 	  execute_cmd("mkdir %s/secure_data-rw", get_user_home(user)) != 0 ||
 	  execute_cmd("mount /dev/mapper/%s_container %s/secure_data-rw", user, get_user_home(user)) != 0 ||
-	  execute_cmd("chown %s %s/secure_data-rw", user, get_user_home(user)) != 0)
+	  execute_cmd("chown -R %s %s/secure_data-rw", user, get_user_home(user)) != 0)
 	return (-1);
+  if (setuid(uid) != 0)
+    return (-1);
   return (0);
 }
 
@@ -66,10 +72,16 @@ int  change_container_mdp(const char *user, const char *old_mdp, const char *new
 
 int  close_container(const char *user)
 {
+  uid_t		uid = getuid();
+
+  if (setuid(0) != 0)
+    return (-1);
   if (execute_cmd("umount -f %s/secure_data-rw", get_user_home(user)) != 0 ||
 	  execute_cmd("cryptsetup luksClose %s_container", user) != 0 ||
 	  execute_cmd("rm -rf %s/secure_data-rw", get_user_home(user)) != 0)
 	return (-1);
+  if (setuid(uid) != 0)
+    return (-1);
   return (0);
 }
 
@@ -79,15 +91,14 @@ int  close_container(const char *user)
  * @param pass
  * @return
  */
-int     open_container(const char *user, const char *pass)
+int     	open_container(const char *user, const char *pass)
 {
-  char  volume_path[BUFFER_SIZE];
+  char  	volume_path[BUFFER_SIZE];
+  uid_t		uid = getuid();
 
-  if (getuid())
-  {
-	printf("[PAMela]: You need to be root\n");
-	return (-1);
-  }
+
+  if (setuid(0) != 0)
+    return (-1);
   if (sprintf(volume_path, "%s/.crypted_container", get_user_home(user)) < 0)
 	return (-1);
   else if (access(volume_path, F_OK) == -1)
@@ -96,7 +107,10 @@ int     open_container(const char *user, const char *pass)
 	return (-1);
   if (execute_cmd("mkdir %s/secure_data-rw", get_user_home(user)) != 0 ||
 	  execute_cmd("mount /dev/mapper/%s_container %s/secure_data-rw", user, get_user_home(user)) != 0 ||
-	  execute_cmd("chown %s %s/secure_data-rw", user, get_user_home(user)) != 0)
+	  execute_cmd("chmod -R 700 %s/secure_data-rw", user, get_user_home(user)) != 0 ||
+	  execute_cmd("chown -R %s %s/secure_data-rw", user, get_user_home(user)) != 0)
 	return (-1);
+  if (setuid(uid) != 0)
+    return (-1);
   return (0);
 }
